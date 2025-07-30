@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Room Reservation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hotel Room Reservation System</h1>
+
+    <div class="controls">
+        <label for="roomCount">Number of Rooms (1–5):</label>
+        <input type="number" id="roomCount" min="1" max="5">
+        <button onclick="bookRooms()">Book</button>
+        <button onclick="randomize()">Randomize Occupancy</button>
+        <button onclick="reset()">Reset All</button>
+    </div>
+
+    <div id="status"></div>
+
+    <div class="hotel-container" id="hotel"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
